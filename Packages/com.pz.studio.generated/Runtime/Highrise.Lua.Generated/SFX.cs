@@ -16,14 +16,14 @@ using Highrise.Client;
 
 namespace Highrise.Lua.Generated
 {
-    [AddComponentMenu("Lua/CheckPoint")]
+    [AddComponentMenu("Lua/SFX")]
     [LuaBehaviourScript(s_scriptGUID)]
-    public class CheckPoint : LuaBehaviourThunk
+    public class SFX : LuaBehaviourThunk
     {
-        private const string s_scriptGUID = "356318548761486429d335c3aaf3d3ed";
+        private const string s_scriptGUID = "fdbb0032e474aca418163cee6b78ac3f";
         public override string ScriptGUID => s_scriptGUID;
 
-        [SerializeField] public UnityEngine.GameObject m_CheckpointIndicator = default;
+        [SerializeField] public Highrise.AudioShader m_sfxCollectible = default;
 
         protected override SerializedPropertyValue[] SerializeProperties()
         {
@@ -32,7 +32,7 @@ namespace Highrise.Lua.Generated
 
             return new SerializedPropertyValue[]
             {
-                CreateSerializedProperty(_script.GetPropertyAt(0), m_CheckpointIndicator),
+                CreateSerializedProperty(_script.GetPropertyAt(0), m_sfxCollectible),
             };
         }
     }

@@ -23,6 +23,7 @@ namespace Highrise.Lua.Generated
         private const string s_scriptGUID = "5b17973e168eb5448bd3132383d07e26";
         public override string ScriptGUID => s_scriptGUID;
 
+        [SerializeField] public Highrise.AudioShader m_sfxCollectible = default;
 
         protected override SerializedPropertyValue[] SerializeProperties()
         {
@@ -31,6 +32,7 @@ namespace Highrise.Lua.Generated
 
             return new SerializedPropertyValue[]
             {
+                CreateSerializedProperty(_script.GetPropertyAt(0), m_sfxCollectible),
             };
         }
     }
